@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900');
+
+body{
+    margin: 30;
+    background-color: rgb(240,240,240);
+    font-family: 'Montserrat';
+}
+
+div div {
+    background-color: #fff;
+    padding: 20px;
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.span-col-2{grid-column: span 2 / auto;}
+
+.span-row-2{grid-row: span 2 / auto;}
+
+
+@media (max-width: 900px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+    .span-col-2{grid-column: span 3 / auto;}
+}
+
+
+@media (max-width: 675px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+    }
+    .span-row-2{grid-row: auto;}
+    .span-col-2{grid-column: auto;}
+}
